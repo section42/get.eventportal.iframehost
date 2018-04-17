@@ -7,6 +7,7 @@
     <style>
         html, body {
             overflow-x: hidden;
+            padding-bottom: 50px;
         }
         header {
             width: 100%;
@@ -30,15 +31,12 @@
 <body>
 <header>HEADER</header>
 <div class="iframe-wrapper">
-    <iframe id="myIframe" src="http://localhost:4201" scrolling="no"></iframe>
+    <iframe id="myIframe" src="http://localhost:4201?hideFooter=true" scrolling="no"></iframe>
 </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.0/iframeResizer.js"></script>
 <script>iFrameResize({
-//    log: true,
-    resizedCallback: function (test) {
-        console.log('IFRAME:::', test)
-    }
+//    log: true
 }, '#myIframe')</script>
 <script src="./main.js"></script>
 </html>
